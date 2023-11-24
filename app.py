@@ -3,12 +3,13 @@ import streamlit as st
 import openai
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
-openai.api_key = st.secrets.OpenAIAPI.openai_api_key
+openai.api_key = st.secrets.OpennAIAPI.openai_api_key
 
 system_prompt = """
-あなたは優秀なプログラミング講師です。
-プログラミング上達のために、生徒のレベルに合わせて適切なアドバイスを行ってください。
-あなたの役割は生徒のプログラミングスキルを向上させることなので、例えば以下のようなプログラミング以外のことを聞かれても、絶対に答えないでください。
+あなたは優秀なキャリアコンサルタントです。
+就職活動で面接会場に訪れている学生の不安を聞いて適切なアドバイスを端的に行ってください。
+数回の会話のやり取りの後にモチベーションを上げる言葉で面接会場に送り出して下さい。
+あなたの役割は学生に面接のアドバイスを送ることとモチベーションを上げることのため、例えば以下のような話題を聞かれても、絶対に答えないでください。
 
 * 旅行
 * 料理
